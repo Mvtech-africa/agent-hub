@@ -1,66 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-</head>
-<body>
-
-
-
-
-
-
-<!-- ----------------------Header----------------------- -->
-
-
-<header>
-
-        <div class="header-main-con container-1">
-
-
-            <h1>AGENT-HUB</h1>
-
-
-            <ul id="menu" class="menu">
-                <li><a href="">Properties</a></li>
-                <li><a href="">Agents</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">About</a></li>
-                
-
-
-                <div class="menu-2">
-                    <li><div class="div22"><a href="">Login</a></div></li>
-                    <li><div class="div33"><a href="">Join as agent</a></div></li>
-                    
-                    <!-- <li><div class="div33"><a href=""></a></div></li> -->
-                    <li style="display: none;"><div class="div33"><a href="">My Profile</a></div></li>
-                </div>
-
-            </ul>
-
-
-            <label id="menu-toggle" class="menu-toggle">
-                <i class="uil uil-bars icon visible" id="open-icon"></i>
-                <i class="uil uil-times icon" id="close-icon"></i>
-            </label>
-
-
-        </div>
-
-</header>
-
-<div id="header-nav" class="header-nav"></div>
-
-
-
-
+{% extends "pages/layout.html" %}
+{% load static %} 
+{% block title %}
+    <title>Realtor - Home</title>
+{% endblock %}
 <!-- ---------------------- Hero section ----------------------- -->
-
+{% block body %}
 <section class="hero">
     <div class="hero-main-con container-1">
         <div class="hero-detail">
@@ -81,8 +25,6 @@
     </div>
 
 </section>
-
-
 
 
 
@@ -114,7 +56,7 @@
 
         <div class="prop-con">
             <div class="prop-image">
-                <img src="image/pic-7.jpeg" alt="">
+                <img src="{% static 'image/pic-7.jpeg' %}" alt="">
             </div>
 
 
@@ -127,7 +69,7 @@
 
                 <div class="agent-d-con">
                     <div class="agent-pic">
-                        <img src="image/pic-7.jpeg" alt="">
+                        <img src="{% static 'image/pic-7.jpeg' %}" alt="">
                     </div>
 
                     <div class="agent-detail">
@@ -154,6 +96,7 @@
 
     </div>
 </section>
+{% endblock body %}
 
 
 

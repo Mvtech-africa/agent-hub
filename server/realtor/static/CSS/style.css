@@ -47,8 +47,7 @@
 
 
 
-
-
+--pink-700:  #D21856;
 --grey-bg-color: #f4f4f4;
 --main-bg-color: #ffffff;
 --border-color: #f7f7f7;
@@ -135,7 +134,10 @@ body {
     background-color: var(--main-bg-color);
     color: var(--text-color-8);
     height: 500vh;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* font-family: "Inter", sans-serif; */
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 
@@ -278,14 +280,14 @@ header {
     /* display: none; */
     padding: 10px 20px;
     border: 1px solid var(--primary-color-50);
-    border-radius: 4px;
+    border-radius: 10px;
     color: var(--text-color-6);
 }
 
 .div33 a {
     padding: 10px 20px;
     background-color: var(--origin-primary-color-500);
-    border-radius: 4px;
+    border-radius: 10px;
     color: var(--text-color-1);
 }
 
@@ -306,7 +308,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(image/bg-1.jpeg);
+    background-image: url(../image/bg-1.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -429,7 +431,7 @@ header {
 
 .s-form input {
     width: 100%;
-    height: 40px;
+    height: 45px;
     /* background-color: rgb(245, 245, 245); */
     background-color: rgb(239, 239, 239);
     border: none;
@@ -452,7 +454,7 @@ header {
 
 .s-form button {
     width: 30%;
-    height: 40px;
+    height: 44px;
     font-size: var(--font-17);
     font-weight: 600;
     color: var(--white-color);
@@ -538,7 +540,10 @@ header {
 
 
 .prop-image img {
+    height: 100%;
     width: 100%;
+    display: block;
+    object-fit: cover;
     /* transform: scale(1); */
     transition: 0.3s ease;
 }
@@ -564,8 +569,10 @@ header {
 
 
 .agent-pic img {
+    height: 100%;
     width: 100%;
-    background-size: cover;
+    display: block;
+    object-fit: cover;
 }
 
 
@@ -651,6 +658,588 @@ header {
 .a-d-icon span {
     color: var(--origin-secondary-color-500);
 }
+
+
+
+
+/* -------------------------- Top-Agent ------------------------------ */
+
+
+
+
+.t-agents {
+    background-color: var(--grey-bg-color);
+    padding: 150px 0;
+}
+
+
+.t-agent-main-con {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.agent-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    background-color: var(--white-color);
+    height: 300px;
+    padding: 30px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.agent-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+
+
+.agent-image img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+.a-rank-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.a-rank-con p {
+    font-size: var(--font-16);
+    font-weight: 600;
+    color: var(--text-color-7);
+}
+
+
+.a-p-1 {
+    color: var(--text-color-5);
+}
+
+
+
+.a-p-2 {
+    color: var(--text-color-5);
+    font-size: var(--font-14);
+    width: 80%;
+    max-width: 80%;
+    margin-inline: auto;
+}
+
+
+.agent-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    padding: 0 20px;
+    background-color: var(--pink-700);
+    font-size: var(--font-14);
+    font-weight: 600;
+    color: var(--white-color);
+    border-radius: 100px;
+    transition: 0.3s ease;
+}
+
+
+
+.agent-btn:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* -------------------------------- web rating ------------------------------ */
+
+
+.web-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 0;
+    background-color: var(--black--color);
+}
+
+
+.web-rating h1 {
+    color: var(--text-color-4);
+    font-size: var(--font-32);
+    text-align: center;
+    width: 80%;
+    max-width: 80%;
+    margin-inline: auto;
+}
+
+
+.w-r-main-con {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.web-r-con {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.web-r-con h1 {
+    color: var(--text-color-1);
+    font-size: var(--font-40);
+}
+
+
+.web-r-con p {
+    color: var(--text-color-3);
+    font-size: var(--font-16);
+}
+
+
+
+/* ------------------------------- agent-network ------------------------------------------- */
+
+
+.agent-n {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+
+.agent-n-main-con {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+
+
+.agent-n h1 {
+    font-size: var(--font-32);
+    text-align: center;
+    width: 80%;
+    max-width: 80%;
+    margin-inline: auto;
+}
+
+
+.a-n-con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    height: 150px;
+    width: 100%;
+    background-color: var(--primary-color-50);
+    border: 1px solid rgb(215, 214, 214);
+    border-radius: 10px;
+    padding: 20px 0;
+    transition: 0.3s ease;
+}
+
+.a-n-con:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.a-n-svg {
+    font-size: 40px;
+}
+
+
+.a-sub-con {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 80%;
+    max-width: 80%;
+    margin-inline: auto;
+}
+
+
+.a-sub-con h4 {
+    font-size: var(--font-14);
+    color: var(--text-color-6);
+}
+
+
+
+.a-sub-con p {
+    font-size: var(--font-14);
+    color: var(--text-color-5);
+}
+
+
+
+.a-n-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 40px;
+    background-color: var(--pink-700);
+    font-size: var(--font-16);
+    font-weight: 600;
+    border-radius: 100px;
+    color: var(--text-color-1);
+}
+
+
+
+/* ------------------------------------ contact form ---------------------------------- */
+
+
+.c-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 0;
+}
+
+
+
+
+.c-form h1 {
+    font-size: var(--font-32);
+    text-align: center;
+    width: 80%;
+    max-width: 80%;
+    margin-inline: auto;
+}
+
+
+
+
+.c-form-con {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+
+.c-sub-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+
+
+.c-form-con input {
+    width: 100%;
+    height: 45px;
+    /* background-color: rgb(245, 245, 245); */
+    background-color: rgb(239, 239, 239);
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    font-size: var(--font-16);
+}
+
+
+.c-sub-form textarea {
+    width: 100%;
+    height: 70px;
+    /* background-color: rgb(245, 245, 245); */
+    background-color: rgb(239, 239, 239);
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    font-size: var(--font-16);
+    padding: 10px;
+}
+
+
+
+
+.c-sub-form select {
+    width: 100%;
+    
+    /* background-color: rgb(245, 245, 245); */
+    background-color: rgb(239, 239, 239);
+    border: none;
+    outline: none;
+    padding: 6px 20px;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    font-size: var(--font-16);
+    /* appearance: none; */
+}
+
+
+.select-1 {
+    width: 100%;
+    height: 45px;
+    /* background-color: rgb(245, 245, 245); */
+    background-color: rgb(239, 239, 239);
+    border: none;
+    outline: none;
+    padding: 6px 20px;
+    transition: 0.3s ease;
+    border-radius: 10px;
+    font-size: var(--font-16);
+    /* appearance: none; */
+}
+
+
+
+.c-sub-form option {
+    padding: 6px 10px;
+}
+
+
+
+.c-form-con button {
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    font-size: var(--font-16);
+    font-weight: 600;
+    background-color: var(--primary-color-950);
+    color: var(--white-color);
+}
+
+
+/* ------------------------- footer -------------------------------------------- */
+
+footer {
+    padding: 80px 0 0 0;
+    background-color: var(--black--color);
+}
+
+
+.footer-main-con {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+
+
+.footer-con {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+
+
+.footer-con h4 {
+    color: var(--text-color-1);
+}
+
+
+
+.footer-con a {
+    color: var(--text-color-4);
+    transition: 0.3s ease;
+}
+
+
+.footer-con a:hover {
+    color: var(--text-color-1);
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.c-r {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    border-top: 1px solid grey;
+    width: 90%;
+    max-width: 90%;
+    margin-inline: auto;
+    margin-top: 30px;
+}
+
+
+.c-r p {
+    color: var(--white-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -786,6 +1375,43 @@ header {
 
 
 
+/* -------------------------- Top-Agent ------------------------------ */
+
+
+
+.t-agent-main-con {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+
+
+
+/* ------------------------------- agent-network ------------------------------------------- */
+
+
+
+.agent-n-main-con {
+    overflow: auto;
+}
+
+
+
+.a-n-con {
+    width: 300px;
+}
+
+
+
+
+/* ------------------------- footer -------------------------------------------- */
+
+
+.footer-main-con {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
 
 
 
@@ -910,6 +1536,89 @@ header {
     .prop-main-con {
         grid-template-columns: repeat(1, 1fr);
     }
+
+
+        
+    .prop-image {
+        height: 260px;
+    }
+
+
+
+        
+    /* -------------------------- Top-Agent ------------------------------ */
+
+
+
+    .t-agent-main-con {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
+
+
+    
+/* -------------------------------- web rating ------------------------------ */
+
+
+
+.w-r-main-con {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 40px;
+}
+
+
+
+
+/* ------------------------------------ contact form ---------------------------------- */
+
+
+
+.c-sub-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+
+
+.c-sub-form input {
+    width: 96%;
+}
+
+
+.c-sub-form textarea {
+    width: 96%;
+}
+
+
+
+/* ------------------------- footer -------------------------------------------- */
+
+
+.footer-main-con {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+
+
+.footer-con {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
 
 
 

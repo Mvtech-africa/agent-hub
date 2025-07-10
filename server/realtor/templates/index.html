@@ -1,75 +1,17 @@
-<<<<<<< HEAD:index.html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css">
-</head>
-<body>
 
-
-
-
-
-
-<!-- ----------------------Header----------------------- -->
-
-
-<header>
-
-        <div class="header-main-con container-1">
-
-
-            <h1>AGENT-HUB</h1>
-
-
-            <ul id="menu" class="menu">
-                <li><a href="">Properties</a></li>
-                <li><a href="">Agents</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">About</a></li>
-                
-
-
-                <div class="menu-2">
-                    <li><div class="div22"><a href="">Login</a></div></li>
-                    <li><div class="div33"><a href="">Join as agent</a></div></li>
-                    
-                    <!-- <li><div class="div33"><a href=""></a></div></li> -->
-                    <li style="display: none;"><div class="div33"><a href="">My Profile</a></div></li>
-                </div>
-
-            </ul>
-
-
-            <label id="menu-toggle" class="menu-toggle">
-                <i class="uil uil-bars icon visible" id="open-icon"></i>
-                <i class="uil uil-times icon" id="close-icon"></i>
-            </label>
-
-
-        </div>
-
-</header>
-
-<div id="header-nav" class="header-nav"></div>
-
-
-
-
-=======
 {% extends "pages/layout.html" %}
 {% load static %} 
 {% block title %}
     <title>Realtor - Home</title>
-{% endblock %}
->>>>>>> 7b7e9ce217bf75d56b3c0f3d6d30a036a7064601:server/realtor/templates/index.html
+{% endblock title %}
 <!-- ---------------------- Hero section ----------------------- -->
 {% block body %}
+
+
+
+
+<!-- ---------------------- Hero section ----------------------- -->
+
 <section class="hero">
     <div class="hero-main-con container-1">
         <div class="hero-detail">
@@ -90,6 +32,8 @@
     </div>
 
 </section>
+
+
 
 
 
@@ -119,7 +63,8 @@
 
 
 <!-- ---------------------------------------------------- -->
-        <div class="prop-con">
+        <a href="">
+            <div class="prop-con">
 
             <div class="prop-image">
                 <img src="{% static 'image/pic-7.jpeg' %}" alt="">
@@ -155,6 +100,7 @@
             </div>
         </div>
 
+        </a>
 
 
 
@@ -164,10 +110,11 @@
 
 
 <!-- ---------------------------------------------------- -->
-        <div class="prop-con">
+        <a href="">
+            <div class="prop-con">
 
             <div class="prop-image">
-                <img src="image/pic-7.jpeg" alt="">
+                <img src="{% static 'image/pic-7.jpeg' %}" alt="">
             </div>
 
             <div class="prop-detail">
@@ -181,7 +128,7 @@
                 <div class="agent-d-con">
 
                     <div class="agent-pic">
-                        <img src="image/pic-7.jpeg" alt="">
+                        <img src="{% static 'image/pic-7.jpeg' %}" alt="">
                     </div>
 
                     <div class="agent-detail">
@@ -200,15 +147,16 @@
             </div>
         </div>
 
-
+        </a>
 
 
 
 <!-- ---------------------------------------------------- -->
-        <div class="prop-con">
+        <a href="">
+            <div class="prop-con">
 
             <div class="prop-image">
-                <img src="image/pic-7.jpeg" alt="">
+                <img src="{% static 'image/pic-7.jpeg' %}" alt="">
             </div>
 
             <div class="prop-detail">
@@ -222,7 +170,7 @@
                 <div class="agent-d-con">
 
                     <div class="agent-pic">
-                        <img src="image/pic-7.jpeg" alt="">
+                        <img src="{% static 'image/pic-7.jpeg' %}" alt="">
                     </div>
 
                     <div class="agent-detail">
@@ -241,13 +189,17 @@
             </div>
         </div>
 
+        </a>
+
+
 
 
 <!-- ---------------------------------------------------- -->
-        <div class="prop-con">
+        <a href="">
+            <div class="prop-con">
 
             <div class="prop-image">
-                <img src="image/pic-7.jpeg" alt="">
+                <img src="{% static 'image/pic-7.jpeg' %}" alt="">
             </div>
 
             <div class="prop-detail">
@@ -261,7 +213,7 @@
                 <div class="agent-d-con">
 
                     <div class="agent-pic">
-                        <img src="image/pic-7.jpeg" alt="">
+                        <img src="{% static 'image/pic-7.jpeg' %}" alt="">
                     </div>
 
                     <div class="agent-detail">
@@ -280,14 +232,19 @@
             </div>
         </div>
 
+        </a>
+
+
+
 
 
 
 <!-- ---------------------------------------------------- -->
-        <div class="prop-con">
+        <a href="">
+            <div class="prop-con">
 
             <div class="prop-image">
-                <img src="image/pic-7.jpeg" alt="">
+                <img src="{% static 'image/pic-7.jpeg' %}" alt="">
             </div>
 
             <div class="prop-detail">
@@ -301,7 +258,7 @@
                 <div class="agent-d-con">
 
                     <div class="agent-pic">
-                        <img src="image/pic-7.jpeg" alt="">
+                        <img src="{% static 'image/pic-7.jpeg' %}" alt="">
                     </div>
 
                     <div class="agent-detail">
@@ -320,16 +277,20 @@
             </div>
         </div>
 
+        </a>
 
 
 
 
 
-<!-- ---------------------------------------------------- -->
-        <div class="prop-con">
+
+
+        <!-- ---------------------------------------------------- -->
+        <a href="">
+            <div class="prop-con">
 
             <div class="prop-image">
-                <img src="image/pic-7.jpeg" alt="">
+                <img src="{% static 'image/pic-7.jpeg' %}" alt="">
             </div>
 
             <div class="prop-detail">
@@ -343,7 +304,7 @@
                 <div class="agent-d-con">
 
                     <div class="agent-pic">
-                        <img src="image/pic-7.jpeg" alt="">
+                        <img src="{% static 'image/pic-7.jpeg' %}" alt="">
                     </div>
 
                     <div class="agent-detail">
@@ -362,6 +323,86 @@
             </div>
         </div>
 
+        </a>
+
+
+
+
+    </div>
+</section>
+
+
+
+
+<!-- --------------------------------Top-Agent ---------------------------------- -->
+
+<section class="t-agents">
+    <div class="t-agent-main-con container-1">
+
+
+
+
+
+<!------------------------------------------------------------>
+        <div class="agent-con">
+
+            <div class="agent-image">
+                <img src="{% static 'image/pic-7.jpeg' %}" alt="">
+            </div>
+            
+            <div class="a-rank-con">
+                <p>John Smith Realty</p>
+                <div class="a-d-icon">
+                    <i class="uis uis-star"></i>
+                    <i class="uis uis-star"></i>
+                    <i class="uis uis-star"></i>
+                    <i class="uis uis-star-half-alt"></i>
+                    <i class="uil uil-star"></i>
+                    <span>4.8</span>
+                </div>
+            </div>
+
+            <p class="a-p-1">127 Properties Sold</p>
+
+            <p  class="a-p-2">Specializes in luxury homes and commercial properties</p>
+
+            <a href="">
+                <div class="agent-btn">VIEW PROFILE</div>
+            </a>
+        </div>
+
+
+
+
+
+
+<!------------------------------------------------------------>
+        <div class="agent-con">
+
+            <div class="agent-image">
+                <img src="{% static 'image/pic-7.jpeg' %}" alt="">
+            </div>
+            
+            <div class="a-rank-con">
+                <p>John Smith Realty</p>
+                <div class="a-d-icon">
+                    <i class="uis uis-star"></i>
+                    <i class="uis uis-star"></i>
+                    <i class="uis uis-star"></i>
+                    <i class="uis uis-star-half-alt"></i>
+                    <i class="uil uil-star"></i>
+                    <span>4.8</span>
+                </div>
+            </div>
+
+            <p class="a-p-1">127 Properties Sold</p>
+
+            <p  class="a-p-2">Specializes in luxury homes and commercial properties</p>
+
+            <a href="">
+                <div class="agent-btn">VIEW PROFILE</div>
+            </a>
+        </div>
 
 
 
@@ -369,8 +410,67 @@
 
 
 
+<!------------------------------------------------------------>
+        <div class="agent-con">
+
+            <div class="agent-image">
+                <img src="{% static 'image/pic-7.jpeg' %}" alt="">
+            </div>
+            
+            <div class="a-rank-con">
+                <p>John Smith Realty</p>
+                <div class="a-d-icon">
+                    <i class="uis uis-star"></i>
+                    <i class="uis uis-star"></i>
+                    <i class="uis uis-star"></i>
+                    <i class="uis uis-star-half-alt"></i>
+                    <i class="uil uil-star"></i>
+                    <span>4.8</span>
+                </div>
+            </div>
+
+            <p class="a-p-1">127 Properties Sold</p>
+
+            <p  class="a-p-2">Specializes in luxury homes and commercial properties</p>
+
+            <a href="">
+                <div class="agent-btn">VIEW PROFILE</div>
+            </a>
+        </div>
 
 
+
+
+
+
+
+<!------------------------------------------------------------>
+        <div class="agent-con">
+
+            <div class="agent-image">
+                <img src="{% static 'image/pic-7.jpeg' %}" alt="">
+            </div>
+            
+            <div class="a-rank-con">
+                <p>John Smith Realty</p>
+                <div class="a-d-icon">
+                    <i class="uis uis-star"></i>
+                    <i class="uis uis-star"></i>
+                    <i class="uis uis-star"></i>
+                    <i class="uis uis-star-half-alt"></i>
+                    <i class="uil uil-star"></i>
+                    <span>4.8</span>
+                </div>
+            </div>
+
+            <p class="a-p-1">127 Properties Sold</p>
+
+            <p  class="a-p-2">Specializes in luxury homes and commercial properties</p>
+
+            <a href="">
+                <div class="agent-btn">VIEW PROFILE</div>
+            </a>
+        </div>
 
 
 
@@ -378,31 +478,213 @@
 
     </div>
 </section>
+
+
+
+<!-- ---------------------------------------- web rating-------------------------- -->
+
+<section class="web-rating">
+
+    <h1>Trusted by Thousands</h1>
+
+    <div class="w-r-main-con container-1">
+
+        <div class="web-r-con">
+            <h1>250+</h1>
+            <p>Verified Agents</p>
+        </div>
+
+
+        <div class="web-r-con">
+            <h1>5,000+</h1>
+            <p>Properties Listed</p>
+        </div>
+
+
+
+        <div class="web-r-con">
+            <h1>15,000+</h1>
+            <p>Happy Customers</p>
+        </div>
+
+
+
+        <div class="web-r-con">
+            <h1>$2.5B+</h1>
+            <p>Properties Sold</p>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+<!-- ----------------------------- agent-network --------------------------------- -->
+
+
+<section class="agent-n">
+    <h1>Join Our Agent Network</h1>
+
+    <div class="agent-n-main-con container-1">
+
+
+        <a href="">
+            <div class="a-n-con">
+                <span class="a-n-svg">📝</span>
+
+                <div class="a-sub-con">
+                    <h4>1. Register & Verify</h4>
+                    <p>Submit your credentials and get verified by our team</p>
+                </div>
+            </div>
+        </a>
+
+
+
+
+
+        <a href="">
+            <div class="a-n-con">
+                <span class="a-n-svg">🏠</span>
+                <div class="a-sub-con">
+                    <h4>2. List Properties</h4>
+                    <p>Upload your listings with our easy-to-use dashboard</p>
+                </div>
+            </div>
+        </a>
+
+
+
+
+
+
+        <a href="">
+            <div class="a-n-con">
+                <span class="a-n-svg">💰</span>
+                <div class="a-sub-con">
+                    <h4>3. Get Leads & Sell</h4>
+                    <p>Receive qualified leads and close more deals</p>
+                </div>
+            </div>
+        </a>
+
+
+
+    </div>
+
+    <a href="">
+        <div class="a-n-btn">START SELLING TODAY</div>
+    </a>
+</section>
+
+
+
+<!-- ------------------------------ contact form --------------------------------- -->
+
+
+<section class="c-form">
+
+    <h1>Get Connected</h1>
+
+    <div class="c-form-main-con container-1">
+
+        <form class="c-form-con" action="">
+
+            <div class="c-sub-form">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Full Name">
+            </div>
+
+
+            <div class="c-sub-form">
+                <input type="text" placeholder="Full Name">
+                
+                <select class="select-1" name="" id="">
+                    <option disabled selected value="">I'm interested</option>
+                    <option value="">I'm interested</option>
+                    <option value="">I'm interested</option>
+                    <option value="">I'm interested</option>
+                </select>
+
+            </div>
+
+            
+
+                <select class="select-1" name="" id="">
+                    <option disabled selected value="">I'm interested</option>
+                    <option value="">I'm interested</option>
+                    <option value="">I'm interested</option>
+                    <option value="">I'm interested</option>
+                </select>
+
+
+
+            <div class="c-sub-form">
+                <textarea name="" placeholder="Tell us about your needs..." ></textarea>
+            </div>
+
+
+            <button>SUBMIT REQUEST</button>
+
+        </form>
+
+    </div>
+</section>
+
+
+<!-- ------------------------------- footer ------------------------------------ -->
+
+<footer>
+    <div class="footer-main-con container-1">
+
+        <div class="footer-con">
+            <h4>For Buyers</h4>
+            <a href="">Browse Properties</a>
+            <a href="">Find Agents</a>
+            <a href="">Buying Guide</a>
+        </div>
+
+
+
+        <div class="footer-con">
+            <h4>For Agents</h4>
+            <a href="">Join Platform</a>
+            <a href="">Agent Dashboard</a>
+            <a href="">Marketing Tools</a>
+            <a href="">Commission Info</a>
+        </div>
+
+
+
+        <div class="footer-con">
+            <h4>Company</h4>
+            <a href="">About Us</a>
+            <a href="">How It Works</a>
+            <a href="">Success Stories</a>
+            <a href="">Press</a>
+        </div>
+
+
+
+        <div class="footer-con">
+            <h4>Support</h4>
+            <a href="">Contact Support</a>
+            <a href="">FAQ</a>
+            <a href="">Terms of Service</a>
+            <a href="">Privacy Policy</a>
+        </div>
+
+    </div>
+
+
+    <div class="c-r">
+        <p>&copy; 2024 Property Hub. All rights reserved.</p>
+    </div>
+
+
+</footer>
+
 {% endblock body %}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="main.js"></script>
-</body>
-</html>

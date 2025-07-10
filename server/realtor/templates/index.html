@@ -1,3 +1,4 @@
+<<<<<<< HEAD:index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,8 +61,15 @@
 
 
 
+=======
+{% extends "pages/layout.html" %}
+{% load static %} 
+{% block title %}
+    <title>Realtor - Home</title>
+{% endblock %}
+>>>>>>> 7b7e9ce217bf75d56b3c0f3d6d30a036a7064601:server/realtor/templates/index.html
 <!-- ---------------------- Hero section ----------------------- -->
-
+{% block body %}
 <section class="hero">
     <div class="hero-main-con container-1">
         <div class="hero-detail">
@@ -82,8 +90,6 @@
     </div>
 
 </section>
-
-
 
 
 
@@ -116,7 +122,7 @@
         <div class="prop-con">
 
             <div class="prop-image">
-                <img src="image/pic-7.jpeg" alt="">
+                <img src="{% static 'image/pic-7.jpeg' %}" alt="">
             </div>
 
             <div class="prop-detail">
@@ -130,7 +136,7 @@
                 <div class="agent-d-con">
 
                     <div class="agent-pic">
-                        <img src="image/pic-7.jpeg" alt="">
+                        <img src="{% static 'image/pic-7.jpeg' %}" alt="">
                     </div>
 
                     <div class="agent-detail">
@@ -372,6 +378,7 @@
 
     </div>
 </section>
+{% endblock body %}
 
 
 

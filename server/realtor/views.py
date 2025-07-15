@@ -7,12 +7,21 @@ def index (request):
     """
     return render(request, 'index.html')
 
-def sign_up(request):
-
-    return render(request, 'sign-up.html')
-
-def sign_in(request):
-    return render (request, 'sign-in.html')
-
 def upload(request):
     return render(request, 'upload.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+def property_detail(request):
+    """
+    Render the property detail page for a specific property.
+    """
+    # Logic to retrieve property details by id would go here
+    return render(request, 'properties.html')
+
+
+
+def agent(request):
+    
+    return render(request, 'agents.html')

@@ -29,10 +29,13 @@
 <section class="form remove-margin">
 
     <div class="form-main-con">
+        {% if message %}
         <div class="message error">
+            
             <p>This is an error message</p>
+            
         </div>
-
+        {% endif %}
         <form class="form-con" action="">
 
 
@@ -61,7 +64,7 @@
             <button>SignUp</button>
         </form>
 
-        <p>Don't have an account? <a href="{% url 'sign-up' %}">SignUp</a></p>
+        <p>Don't have an account? <a href="{% url 'user:sign-up' %}">SignUp</a></p>
     </div>
     
 </section>
@@ -75,6 +78,6 @@
 
 
 
-<script src="{% static 'CSS/main.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

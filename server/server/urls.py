@@ -19,6 +19,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('realtor.urls')),  # Include the URLs from the realtor app
+    path('', include('realtor.urls')),
+    path('user', include('user.urls')),
+    # Include the URLs from the realtor app
     # You can add more includes here for other apps
 ]

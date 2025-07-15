@@ -1,13 +1,11 @@
-from django.urls import path, include
-from .views import index, sign_in, sign_up, upload
+from django.urls import path
+from . import views
 
+app_name = 'realtor'
 urlpatterns = [
-    path('', index, name='realtor-index'),  # URL for the index view 
-    path('sign-up', sign_up, name='sign-up'),
-    path('sign-in', sign_in, name='sign-in'),
-    path('upload', upload, name='upload')
-    # You can add more paths here for other views in the realtor app
-    # path('another-view/', another_view, name='another-view'), 
-    # path('property/<int:id>/', property_detail, name='property-detail'),
-    # etc.  
+    path('', views.index, name='realtor-index'),  # URL for the index view 
+    path('upload', views.upload, name='upload'),
+    path('about', views.about, name='about'), 
+    path('property', views.property_detail, name='property-detail'),  # URL for property detail view
+    path('agent', views.agent, name='agent' )
 ]

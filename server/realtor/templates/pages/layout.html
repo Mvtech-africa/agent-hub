@@ -23,23 +23,26 @@
 
 <header>
 
+        
         <div class="header-main-con container-1">
 
 
-            <h1>AGENT-HUB</h1>
+            <a href="{% url 'realtor:realtor-index' %}">
+                <h1>AgentHub</h1>
+            </a>
 
 
             <ul id="menu" class="menu">
-                <li><a href="">Properties</a></li>
-                <li><a href="">Agents</a></li>
-                <li><a href="">Services</a></li>
-                <li><a href="">About</a></li>
+                <li><a href="{% url 'realtor:property-detail' %}">Properties</a></li>
+                <li><a href="{% url 'realtor:agent' %}">Agents</a></li>
+                <li><a href="{% url 'realtor:about' %}#service">Services</a></li>
+                <li><a href="{% url 'realtor:about' %}">About</a></li>
                 
 
 
                 <div class="menu-2">
-                    <li><div class="div22"><a href="{% url 'sign-in' %}">Login</a></div></li>
-                    <li><div class="div33"><a href="{% url 'sign-up' %}">Join as agent</a></div></li>
+                    <li><div class="div22"><a href="{% url 'user:sign-in' %}">Login</a></div></li>
+                    <li><div class="div33"><a href="{% url 'user:agent-signup' %}">Join as agent</a></div></li>
                     
                     <!-- <li><div class="div33"><a href=""></a></div></li> -->
                     <li style="display: none;"><div class="div33"><a href="">My Profile</a></div></li>

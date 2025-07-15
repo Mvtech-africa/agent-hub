@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static  'css/style.css' %}">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css>
+</head>
+<body>
+
+
+
+
+
+
+<!-- ---------------------------- form section ------------------------- -->
+
+
+
+<section class="form remove-margin">
+
+    <div class="form-main-con">
+        <div class="message error">
+            <p>This is an error message</p>
+        </div>
+
+        <form class="form-con" action="">
+
+
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Enter Your Username" required>
+            </div>
+
+        
+
+
+
+            <div class="input-group">
+                <div class="password-con">
+
+                    <input type="password" id="password" placeholder="Confirm Your Password" required>
+
+                    <span class="toggle-btn" onclick="togglePassword()">
+                        <I id="toggle-icon" class="fas fa-eye"></i>
+                    </span>
+
+                </div>
+            </div>
+
+
+
+            <button>SignUp</button>
+        </form>
+
+        <p>Don't have an account? <a href="{% url 'sign-up' %}">SignUp</a></p>
+    </div>
+    
+</section>
+
+
+
+
+
+
+
+
+
+
+<script src="{% static 'CSS/main.js' %}"></script>
+</body>
+</html>

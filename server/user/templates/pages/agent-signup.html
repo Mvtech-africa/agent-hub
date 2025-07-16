@@ -41,15 +41,15 @@
 
 
             <div class="input-group">
-                <input type="text" id="name" placeholder="Enter Your Name" required>
+                {{signup_form.fullname}}
             </div>
 
             <div class="input-group">
-                <input type="email" id="email" placeholder="Enter Your Email" required>
+                {{signup_form.email}}
             </div>
 
             <div class="input-group">
-                <input type="text" id="username" placeholder="Enter Your Username" required>
+                {{signup_form.username}}
             </div>
 
             <div class="input-group">
@@ -90,7 +90,6 @@
     </div>
     
 </section>
-
 
 <script src="{% static 'js/main.js' %}"></script>
 </body>

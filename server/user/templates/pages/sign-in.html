@@ -36,11 +36,12 @@
             
         </div>
         {% endif %}
+        <h3>Login</h3>
+
         <form class="form-con" action="">
-
-
+             {% csrf_token %} 
             <div class="input-group">
-                <input type="text" id="username" placeholder="Enter Your Username" required>
+                {{signin_form.username}}
             </div>
 
         
@@ -50,8 +51,7 @@
             <div class="input-group">
                 <div class="password-con">
 
-                    <input type="password" id="password" placeholder="Confirm Your Password" required>
-
+                    {{signin_form.password}}
                     <span class="toggle-btn" onclick="togglePassword()">
                         <I id="toggle-icon" class="fas fa-eye"></i>
                     </span>
@@ -61,7 +61,7 @@
 
 
 
-            <button>SignUp</button>
+            <button>SignIn</button>
         </form>
 
         <p>Don't have an account? <a href="{% url 'user:sign-up' %}">SignUp</a></p>

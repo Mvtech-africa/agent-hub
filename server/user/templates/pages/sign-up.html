@@ -36,17 +36,18 @@
             
         </div>
         {% endif %}
+        <h3>Sign Up</h3>
         <form class="form-con" action="">
-
-            <h3>Sign Up</h3>
+            {% csrf_token %}
+            
 
 
             <div class="input-group">
-                <input type="text" id="name" placeholder="Enter Your Name" required>
+                {{ signup_form.fullname }}
             </div>
 
             <div class="input-group">
-                <input type="email" id="email" placeholder="Enter Your Email" required>
+                {{signup_form.email}}
             </div>
 
             <div class="input-group">
@@ -54,14 +55,21 @@
             </div>
 
             <div class="input-group">
-                <input type="text" id="phone" placeholder="Enter Your Phone Number" required>
+                {{signup_form.username}}
             </div>
 
+            <div class="input-group">
+                <select>
+                    <option value="" disabled selected>Are you an agent?</option>
+                    <option value="">Yes</option>
+                    <option value="">No</option>
+                </select>
+            </div>
 
 
             <div class="input-group">
                 <div class="password-con">
-                    <input type="text" placeholder="Enter Your Password" required>
+                    {{ signup_form.password }}
                 </div>
             </div>
 
@@ -71,8 +79,7 @@
             <div class="input-group">
                 <div class="password-con">
 
-                    <input type="password" id="password" placeholder="Confirm Your Password" required>
-
+                    {{ signup_form.confirm_password }}
                     <span class="toggle-btn" onclick="togglePassword()">
                         <I id="toggle-icon" class="fas fa-eye"></i>
                     </span>
@@ -89,17 +96,6 @@
     </div>
     
 </section>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

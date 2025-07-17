@@ -616,32 +616,32 @@
 
 
 
-<section class="contact-form">  
+<section class="contact-form" id='contact'>  
     <form class="contact-form-main-con container-1">
         
 
         <h1>Get Connected</h1>
 
-
+        {% if message %}
         <div class="message success">
             <p>This is an error message</p>
         </div>
+        {% endif %}
 
-
-        <div class="contact-form-con">
+        <div class="contact-form-con" method='POST' action=''>
 
             <div class="input-group">
-                <input type="text" id="name" placeholder="Enter Your Name" required>
+                {{forms.name}}
             </div>
 
 
             <div class="input-group">
-                <input type="text" id="name" placeholder="Enter Your Name" required>
+                {{forms.name}}
             </div>
 
 
             <div class="input-group">
-                <input type="text" id="name" placeholder="Enter Your Name" required>
+                {{forms.email}}            
             </div>
             
             
@@ -664,8 +664,7 @@
         </select>
 
 
-        <textarea  name="" id="" placeholder="Tell us what you want"></textarea>
-
+        {{forms.message}}
 
         <button>Send</button>
         

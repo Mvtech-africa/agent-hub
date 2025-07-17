@@ -31,14 +31,12 @@
     <div class="form-main-con">
         {% if message %}
         <div class="message error">
-            
-            <p>This is an error message</p>
-            
+            <p>{{message}}</p>
         </div>
         {% endif %}
         <h3>Login</h3>
 
-        <form class="form-con" action="">
+        <form class="form-con" method="POST" action="{% url 'user:sign-in'%}">
              {% csrf_token %} 
             <div class="input-group">
                 {{signin_form.username}}

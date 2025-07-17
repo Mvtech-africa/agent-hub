@@ -19,34 +19,60 @@
 <body>
     
 <!-- ----------------------Header----------------------- -->
-
-
 <header>
 
         
         <div class="header-main-con container-1">
 
 
-            <a href="{% url 'realtor:realtor-index' %}">
+            <a href="{% url 'realtor:index' %}">
                 <h1>AgentHub</h1>
             </a>
 
 
             <ul id="menu" class="menu">
-                <li><a href="{% url 'realtor:property-detail' %}">Properties</a></li>
-                <li><a href="{% url 'realtor:agent' %}">Agents</a></li>
-                <li><a href="{% url 'realtor:about' %}#service">Services</a></li>
-                <li><a href="{% url 'realtor:about' %}">About</a></li>
-                
-
-
-                <div class="menu-2">
-                    <li><div class="div22"><a href="{% url 'user:sign-in' %}">Login</a></div></li>
-                    <li><div class="div33"><a href="{% url 'user:sign-up' %}">Join as agent</a></div></li>
+                <li>
+                    {% if request.user.is_authenticated %}
+                             <a href="{% url 'realtor:property-detail' %}">Properties</a>
+                      {% else %}
+                    <a href="{% url 'user:sign-in' %}">Properties</a>
+                {% endif %}
+               </li>
+                <li>
+                    {% if request.user.is_authenticated %}
+                             <a href="{% url 'realtor:agent' %}">Agent</a>
+                      {% else %}
+                    <a href="{% url 'user:sign-in' %}">Agent</a>
+                {% endif %}
+               </li>
                     
-                    <!-- <li><div class="div33"><a href=""></a></div></li> -->
-                    <li style="display: none;"><div class="div33"><a href="">My Profile</a></div></li>
-                </div>
+            <li>
+               {% if request.user.is_authenticated %}
+                   <a href="{% url 'realtor:about' %}#service">Service</a>
+                {% else %}   
+                   <a href="{% url 'user:sign-in' %}">Service</a>
+                 {% endif %}
+                </li>
+
+            <li>
+               {% if request.user.is_authenticated %}
+                   <a href="{% url 'realtor:about' %}">About</a>
+                {% else %}   
+                   <a href="{% url 'user:sign-in' %}">About</a>
+                 {% endif %}
+                </li>
+
+                
+               <div class="menu-2">
+    {% if not request.user.is_authenticated %}
+        <li><div class="div22"><a href="{% url 'user:sign-in' %}">Login</a></div></li>
+        <li><div class="div33"><a href="{% url 'user:sign-up' %}">Join as agent</a></div></li>
+    {% else %}
+        <li><div class="div33"><a href="{% url 'realtor:profile' %}">{{request.user.username}}</a></div></li>
+        <!-- Or include logout -->
+        <li><div class="div33"><a href="{% url 'realtor:logout' %}">Logout</a></div></li>
+    {% endif %}
+</div>
 
             </ul>
 
@@ -101,7 +127,7 @@
 
         <div class="footer-con">
             <h4>Support</h4>
-            <a href="{% url 'realtor:   index' %}#">Contact Support</a>
+            <a href="{% url 'realtor:index' %}#contact">Contact Support</a>
             <a href="">FAQ</a>
             <a href="">Terms of Service</a>
             <a href="">Privacy Policy</a>

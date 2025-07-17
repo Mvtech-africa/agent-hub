@@ -32,44 +32,44 @@
         {% if message %}
         <div class="message success">
             
-            <p>This is an error message</p>
+            <p>{{message}}</p>
             
         </div>
         {% endif %}
         <h3>Sign Up</h3>
-        <form class="form-con" action="">
+        <form class="form-con" method="POST" action="{% url 'user:sign-up' %}">
             {% csrf_token %}
             
 
 
             <div class="input-group">
-                {{ signup_form.fullname }}
+               {{ form.fullname }}
             </div>
 
             <div class="input-group">
-                {{signup_form.email}}
+               {{ form.email }}
             </div>
 
             <div class="input-group">
-                <input type="text" id="username" placeholder="Enter Your Username" required>
+                {{ form.username }}
             </div>
 
             <div class="input-group">
-                {{signup_form.username}}
+               {{ form.phone_number }}
             </div>
 
             <div class="input-group">
-                <select>
-                    <option value="" disabled selected>Are you an agent?</option>
-                    <option value="">Yes</option>
-                    <option value="">No</option>
-                </select>
+                 {{ form.agent }}
             </div>
+           
 
 
             <div class="input-group">
                 <div class="password-con">
-                    {{ signup_form.password }}
+                    {{ form.password }}
+                    <span class="toggle-btn" onclick="togglePassword()">
+                        <I id="toggle-icon" class="fas fa-eye"></i>
+                    </span>
                 </div>
             </div>
 
@@ -79,28 +79,23 @@
             <div class="input-group">
                 <div class="password-con">
 
-                    {{ signup_form.confirm_password }}
+                    {{ form.confirm_password }}
                     <span class="toggle-btn" onclick="togglePassword()">
                         <I id="toggle-icon" class="fas fa-eye"></i>
                     </span>
 
                 </div>
             </div>
-
-
-
-            <button>SignUp</button>
+            
+   
+            <button type="submit">Sign Up</button>
+      
         </form>
 
         <p>Already have an account? <a href="{% url 'user:sign-in' %}">SignIn</a></p>
     </div>
     
 </section>
-
-
-
-
-
 
 
 <script src="{% static 'js/main.js' %}"></script>

@@ -1,6 +1,8 @@
 {% extends 'pages/layout.html' %}
 {% load static %}
-{% block title %}About Us{% endblock %}
+{% block title %}
+    <title>Realtor - About </title>
+{% endblock title %}
 
 {% block body %}
 
@@ -350,10 +352,16 @@
                 <a href="">
                     <div class="h-btn-1">FIND APARTMENT</div>
                 </a>
-
-                <a href="">
+                {% if not request.user.is_authenticated %}
+                <a href="{% url 'realtor:sign-up' %}">
                     <div class="h-btn-2">JOIN AS AGENT</div>
                 </a>
+                {% else %}
+                <a href="{% url 'realtor:agent' %}">
+                    <div class="h-btn-2">View Agents</div>
+                </a>
+                {% endif %}
+
             </div>
     </div>
 </section>

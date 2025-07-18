@@ -14,11 +14,11 @@
 
         <h1>Upload Apartment</h1>
 
-
+        {% if message %}
         <div class="message success">
-            <p>This is an error message</p>
+            <p>{{ message }}</p>
         </div>
-
+        {% endif %} 
         <div class="upload-form-con">
 
             <div class="input-group">

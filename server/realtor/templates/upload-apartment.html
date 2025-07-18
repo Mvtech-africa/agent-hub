@@ -2,22 +2,19 @@
 {% load static %}
 {% block title %}Upload Details{% endblock %}
 
-{% block content %}
+{% block body %}
 <div class="header-nav h-nav-bg"></div>
 
 <!-- ---------------------------- upload section ------------------------- -->
 <section class="upload-form">  
     <form class="upload-form-main-con container-1">
 
-
-
-        
-
+        {% if message %}
 
         <div class="message success">
-            <p>This is an error message</p>
+            <p>{{message}}</p>
         </div>
-
+        {% endif %}
 
         <h2>Upload Apartment</h2>
 

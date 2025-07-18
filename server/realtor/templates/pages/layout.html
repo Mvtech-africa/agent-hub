@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% block title %}
+    <title>Realtor - Home </title>
+{% endblock title %}
     <link rel="stylesheet" href="{% static 'CSS/style.css' %}" >
      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css">
@@ -38,29 +40,23 @@
                     <a href="{% url 'user:sign-in' %}">Properties</a>
                 {% endif %}
                </li>
-                <li>
-                    {% if request.user.is_authenticated %}
-                             <a href="{% url 'realtor:agent' %}">Agent</a>
-                      {% else %}
-                    <a href="{% url 'user:sign-in' %}">Agent</a>
+                
+               <li>
+                {% if  request.user.is_authenticated %}
+                 <a href="{% url 'realtor:agent' %}">Agent</a>
+                {% else %}
+                 <a href="{% url 'user:sign-in' %}">Agent</a>
                 {% endif %}
+
                </li>
                     
             <li>
-               {% if request.user.is_authenticated %}
-                   <a href="{% url 'realtor:about' %}#service">Service</a>
-                {% else %}   
-                   <a href="{% url 'user:sign-in' %}">Service</a>
-                 {% endif %}
-                </li>
+               <a href="{% url 'realtor:about' %}#service">Service</a>
+            </li>
 
             <li>
-               {% if request.user.is_authenticated %}
                    <a href="{% url 'realtor:about' %}">About</a>
-                {% else %}   
-                   <a href="{% url 'user:sign-in' %}">About</a>
-                 {% endif %}
-                </li>
+            </li>
 
                 
                <div class="menu-2">
@@ -68,9 +64,15 @@
         <li><div class="div22"><a href="{% url 'user:sign-in' %}">Login</a></div></li>
         <li><div class="div33"><a href="{% url 'user:sign-up' %}">Join as agent</a></div></li>
     {% else %}
-        <li><div class="div33"><a href="{% url 'realtor:profile' %}">{{request.user.username}}</a></div></li>
+        <li><div class="div33 div34"><a href="{% url 'realtor:profile' %}">
+            <i class="uil uil-user"></i>
+        </a></div></li>
         <!-- Or include logout -->
-        <li><div class="div33"><a href="{% url 'realtor:logout' %}">Logout</a></div></li>
+        <li>
+            <div class="div33">
+                <a href="{% url 'realtor:logout' %}">
+                    Logout
+                </a></div></li>
     {% endif %}
 </div>
 

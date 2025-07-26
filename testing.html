@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Horizontal Picture Scroll Gallery</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .gallery-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Scrollable container for images */
+  .scroll-gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+  }
+
+  /* Individual picture styles */
+  .pic {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 100px;
+    margin-right: 10px;
+    cursor: pointer;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+  }
+
+  /* Highlight selected picture */
+  .pic:hover {
+    border: 2px solid #007BFF;
+  }
+
+  /* Buttons for scrolling */
+  .scroll-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    margin: 5px 0;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* The modal for larger preview */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .modal-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+
+  /* Close button inside modal */
+  .close-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+  }
+
+
+  .h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    /* text-shadow: #007BFF 0px 0px 1px; */
+    -webkit-text-stroke: 1px red;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+  
+
+</style>
+</head>
+<body>
+
+
+
+<h2 class="h1">Horizontal Picture Scroll Gallery</h2>
+
+
+
+
+<div class="gallery-container">
+  <div class="scroll-buttons">
+    <button id="scroll-left">&lt; Left</button>
+    <button id="scroll-right">Right &gt;</button>
+  </div>
+  
+  <div class="scroll-gallery" id="gallery">
+    <!-- Sample images -->
+    <img src="image/pic-7.jpeg" class="pic" data-large="image/pic-7.jpeg" />
+    <img src="image/pic-7.jpeg" class="pic" data-large="image/pic-7.jpeg" />
+    <img src="image/pic-7.jpeg" class="pic" data-large="image/pic-7.jpeg" />
+    <img src="image/pic-7.jpeg" class="pic" data-large="image/pic-7.jpeg" />
+    <img src="image/pic-7.jpeg" class="pic" data-large="image/pic-7.jpeg" />
+  </div>
+</div>
+
+<!-- Modal for preview -->
+<div class="modal" id="previewModal">
+  <div class="modal-content">
+    <button class="close-btn" id="closeModal">&times;</button>
+    <img id="largeImage" src="" alt="Large Preview" />
+  </div>
+</div>
+
+<script>
+  const gallery = document.getElementById('gallery');
+  const scrollLeftBtn = document.getElementById('scroll-left');
+  const scrollRightBtn = document.getElementById('scroll-right');
+  const modal = document.getElementById('previewModal');
+  const largeImage = document.getElementById('largeImage');
+  const closeModalBtn = document.getElementById('closeModal');
+
+  // Scroll functions
+  scrollLeftBtn.onclick = () => {
+    gallery.scrollBy({ left: -200, behavior: 'smooth' });
+  };
+  scrollRightBtn.onclick = () => {
+    gallery.scrollBy({ left: 200, behavior: 'smooth' });
+  };
+
+  // Handle press and hold for images
+  document.querySelectorAll('.pic').forEach(pic => {
+    let pressTimer = null;
+    let holdTimeout = null;
+
+    const startPress = (e) => {
+      e.preventDefault();
+      holdTimeout = setTimeout(() => {
+        // Show larger preview when held for 4 seconds
+        const largeSrc = pic.getAttribute('data-large');
+        largeImage.src = largeSrc;
+        modal.style.display = 'flex';
+      }, 1000);
+    };
+
+    const cancelPress = () => {
+      clearTimeout(holdTimeout);
+    };
+
+    // Mouse events
+    pic.addEventListener('mousedown', startPress);
+    pic.addEventListener('mouseup', cancelPress);
+    pic.addEventListener('mouseleave', cancelPress);
+
+    // Touch events for mobile
+    pic.addEventListener('touchstart', startPress);
+    pic.addEventListener('touchend', cancelPress);
+    pic.addEventListener('touchcancel', cancelPress);
+
+    // Optional: Click to do something else
+  });
+
+  // Close modal
+  document.getElementById('closeModal').onclick = () => {
+    modal.style.display = 'none';
+  };
+
+  // Close modal when clicking outside the image
+  window.onclick = (e) => {
+    if (e.target == modal) {
+      modal.style.display = 'none';
+    }
+  };
+</script>
+
+</body>
+</html>

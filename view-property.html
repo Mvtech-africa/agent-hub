@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css>
+</head>
+<body>
+
+
+
+
+
+
+<!-- ----------------------Header----------------------- -->
+
+
+
+<header>
+
+        <div class="header-main-con container-1">
+
+
+            <a href="index.html">
+                <h1>AgentHub</h1>
+            </a>
+
+
+
+
+            <ul id="menu" class="menu">
+                <li><a href="properties.html">Apartments</a></li>
+                <li><a href="agents.html">Agents</a></li>
+                <li><a href="about.html">About</a></li>
+                
+                <div class="wish-con">
+                    <li><a href="wishlist.html">Wish list</a></li>
+                    <div class="wich-c-con">10</div>
+                </div>
+
+
+                <div class="menu-2">
+                    <li><div class="div22"><a href="sign-in.html">Login</a></div></li>
+                    <li><div class="div33"><a href="">Join as agent</a></div></li>
+                    
+                    <!-- <li><div class="div33"><a href=""></a></div></li> -->
+                    <li style="display: none;"><div class="div33"><a href="">My Profile</a></div></li>
+                </div>
+
+            </ul>
+
+
+            <label id="menu-toggle" class="menu-toggle">
+                <i class="uil uil-bars icon visible" id="open-icon"></i>
+                <i class="uil uil-times icon" id="close-icon"></i>
+            </label>
+
+
+        </div>
+
+</header>
+
+<div class="header-nav h-nav-bg"></div>
+
+
+
+
+
+
+<!-- --------------------fixed btn----------------------------- -->
+
+<form action="" class="wish-l-con container-1"> 
+    
+        <button class="fixed-btn">
+            Add To Wishlist 
+        </button>
+
+</form>
+
+
+
+
+<!-- ----------------------------------View property-------------------------- -->
+
+
+<section class="prop-video">
+    <div class="prop-vid-main-con container-1">
+        <div class="video-con">
+            <video controls >
+                <source src="image/upload.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+
+
+        <div class="gallery-container">
+            
+            
+            <div class="scroll-gallery" id="gallery">
+
+
+                    <button class="scroll-btn btn-left" id="scroll-left"><i class="uil uil-angle-left"></i></button>
+                    <button class="scroll-btn btn-right" id="scroll-right"><i class="uil uil-angle-right"></i></button>
+
+
+                <!-- Sample images -->
+                <img src="image/pic-7.jpeg" class="pic" data-large="image/pic-7.jpeg" title="Tap & hold to view image"/>
+                <img src="image/pic-7.jpeg" class="pic" data-large="image/pic-7.jpeg" title="Tap & hold to view image"/>
+                <img src="image/pic-7.jpeg" class="pic" data-large="image/pic-7.jpeg" title="Tap & hold to view image"/>
+                <img src="image/pic-7.jpeg" class="pic" data-large="image/pic-7.jpeg" title="Tap & hold to view image"/>
+                <img src="image/pic-7.jpeg" class="pic" data-large="image/pic-7.jpeg" title="Tap & hold to view image"/>
+            </div>
+        </div>
+
+        <img src="" alt="">
+
+
+    </div>
+</section>
+
+
+<!-- Modal for preview -->
+<div class="modal" id="previewModal">
+    <div class="modal-content">
+        <button class="close-btn" id="closeModal">&times;</button>
+        <img id="largeImage" src="" alt="Large Preview" />
+    </div>
+</div>
+
+
+
+
+<!-- ------------------------------property view agent container ---------------------- -->
+
+<section class="p-view-a-con">
+    <div class="p-view-a-main-con container-1">
+
+
+        <div class="p-v-a-c-c-1">
+            <div class="p-v-a-c-c-2">
+
+                <h1>$2,850,000</h1>
+
+                <h2>Luxury Modern Villa</h2>
+
+                <p>📍 Beverly Hills, Los Angeles, CA</p>
+
+
+                <div class="p-v-a-c-c-3">
+
+                    <div class="p-v-a-c-c-4">
+                        <div class="p-v-a-c-c-5">
+                            <span>🛏</span>
+                            <p>5 Bedrooms</p>
+                        </div>
+                    </div>
+
+
+                    <div class="p-v-a-c-c-4">
+                        <div class="p-v-a-c-c-5">
+                            <span>🛁</span>
+                            <p>2 bathroom</p>
+                        </div>
+                    </div>
+
+
+                    <div class="p-v-a-c-c-4">
+                        <div class="p-v-a-c-c-5">
+                            <span>📐</span>
+                            <p>4,200 sq ft</p>
+                        </div>
+                    </div>
+
+
+                    <div class="p-v-a-c-c-4">
+                        <div class="p-v-a-c-c-5">
+                            <span>🚗</span>
+                            <p>3-Car Garage</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+                <div class="p-v-a-c-c-6">
+                    <div class="p-v-a-c-c-7">
+
+                        <div class="p-v-a-c-c-8">
+
+                            <div class="p-v-a-img-con">
+                                <img src="image/pic-7.jpeg" alt="">
+                            </div>
+
+                            <div class="p-v-a-c-c-9">
+                                <h4>Sarah Johnson</h4>
+                                <p>Licensed Real Estate Agent</p>
+                                <small>⭐ 4.9 (127 reviews)</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-v-a-c-c-10">
+                            
+                            <h4>Agent Contact</h4>
+
+                            <div class="p-v-a-c-c-11">
+                                <p>Email</p>
+                                <p>Phone Number</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+                <div class="p-v-a-detail">
+                    <div class="p-v-a-detail-con">
+
+                        <h2>Property Description</h2>
+
+                        <p>Discover luxury living in this stunning modern villa nestled in the prestigious Beverly Hills neighborhood. This architectural masterpiece combines contemporary design with timeless elegance, featuring floor-to-ceiling windows that flood the space with natural light and offer breathtaking views of the surrounding landscape.</p>
+
+                        <p>The open-concept living space seamlessly flows from the gourmet kitchen equipped with premium appliances to the expansive living and dining areas. The master suite is a private retreat with a spa-like bathroom and walk-in closet. Step outside to your own private oasis featuring a resort-style pool, outdoor kitchen, and beautifully landscaped gardens perfect for entertaining.</p>
+                        
+                    </div>
+                </div>
+
+
+
+
+
+
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- ------------------------------- footer ------------------------------------ -->
+
+<footer>
+    <div class="footer-main-con container-1">
+
+        <div class="footer-con">
+            <h4>For Buyers</h4>
+            <a href="">Browse Properties</a>
+            <a href="">Find Agents</a>
+            <a href="">Buying Guide</a>
+        </div>
+
+
+
+        <div class="footer-con">
+            <h4>For Agents</h4>
+            <a href="">Join Platform</a>
+            <a href="">Agent Dashboard</a>
+            <a href="">Marketing Tools</a>
+            <a href="">Commission Info</a>
+        </div>
+
+
+
+        <div class="footer-con">
+            <h4>Company</h4>
+            <a href="">About Us</a>
+            <a href="">How It Works</a>
+            <a href="">Success Stories</a>
+            <a href="">Press</a>
+        </div>
+
+
+
+        <div class="footer-con">
+            <h4>Support</h4>
+            <a href="">Contact Support</a>
+            <a href="">FAQ</a>
+            <a href="">Terms of Service</a>
+            <a href="">Privacy Policy</a>
+        </div>
+
+    </div>
+
+
+    <div class="c-r">
+        <p>&copy; 2024 Property Hub. All rights reserved.</p>
+    </div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="main.js"></script>
+</body>
+</html>

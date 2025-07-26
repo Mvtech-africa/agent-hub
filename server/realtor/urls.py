@@ -1,11 +1,13 @@
 from django.urls import path
 from . import views
 from user import views as user_views
+from django.contrib.auth import views as auth_views
+
 
 app_name = 'realtor'
 urlpatterns = [
     path('', views.index, name='index'),  # URL for the index view 
-    path('upload', views.upload, name='upload'),
+
     path('about', views.about, name='about'), 
     path('properties', views.property_detail, name='property-detail'),  # URL for property detail view
     path('agent', views.agent, name='agent' ),
@@ -13,5 +15,10 @@ urlpatterns = [
     path('sign-in', user_views.sign_in, name='sign-in'),
     path('profile', views.profile, name='profile'),
     path('logout', views.logout_view, name='logout'),
-    path('upload-apartment', views.upload_apartment, name='upload-apartment')
+    path('upload-apartment', views.upload_apartment, name='upload-apartment'),
+    path('view-properties', views.view_property, name='view-properties'),
+     path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
 ]
+
+
+

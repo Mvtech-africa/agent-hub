@@ -13,3 +13,7 @@ class ContactForm(forms.Form):
             
             raise forms.ValidationError("Email must be from the domain 'example.com'")
         return email
+    
+
+class Apartment_upload(forms.Form):
+    pass

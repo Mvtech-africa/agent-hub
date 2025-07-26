@@ -23,7 +23,7 @@ class UserDetails(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     fullname = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=15, unique=True)
-    agent = models.CharField(max_length=3, choices=[('yes', 'yes'), ('no', 'no')], default='no')
+    agent = models.CharField(max_length=3, choices=[('', 'Are you an agent?'),('yes', 'yes'), ('no', 'no')], default='Are you an agent?')
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 

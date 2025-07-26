@@ -16,7 +16,7 @@ def sign_up(request):
             print(form.errors)  # show why it failed
     else:
         form = SignUpForm()
-    return render(request, 'pages/sign-up.html', {'form': form})
+    return render(request, 'pages/sign-up.html', {'form': form,'message':form.errors})
 
 
     

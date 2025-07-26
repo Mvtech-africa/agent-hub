@@ -1,0 +1,70 @@
+{% extends 'pages/layout.html' %}
+{% load static %}
+{% block title %}
+  <title>realtor - view property</title>
+{% endblock title %}
+{% block body %}
+  
+<div class="header-nav h-nav-bg"></div>
+
+
+
+
+
+
+
+
+<!-- ----------------------------------View property-------------------------- -->
+
+
+<section class="prop-video">
+    <div class="prop-vid-main-con container-1">
+        <div class="video-con">
+            <video controls >
+                <source src="image/upload.mp4" type="video/mp4">
+            </video>
+        </div>
+
+
+
+
+        <div class="gallery-container">
+            
+            
+            <div class="scroll-gallery" id="gallery">
+
+
+                    <button class="scroll-btn btn-left" id="scroll-left"><i class="uil uil-angle-left"></i></button>
+                    <button class="scroll-btn btn-right" id="scroll-right"><i class="uil uil-angle-right"></i></button>
+
+
+                <!-- Sample images -->
+                <img src="{% static 'image/pic-7.jpeg' %}" class="pic" data-large="image/pic-7.jpeg" title="Tap & hold to view image"/>
+                <img src="{% static 'image/pic-7.jpeg' %}" class="pic" data-large="image/pic-7.jpeg" title="Tap & hold to view image"/>
+                <img src="{% static 'image/pic-7.jpeg' %}" class="pic" data-large="image/pic-7.jpeg" title="Tap & hold to view image"/>
+                <img src="{% static 'image/pic-7.jpeg' %}" class="pic" data-large="image/pic-7.jpeg" title="Tap & hold to view image"/>
+                <img src="{% static 'image/pic-7.jpeg' %}" class="pic" data-large="image/pic-7.jpeg" title="Tap & hold to view image"/>
+            </div>
+        </div>
+
+        <img src="" alt="">
+
+
+    </div>
+</section>
+
+
+
+
+
+<!-- Modal for preview -->
+<div class="modal" id="previewModal">
+    <div class="modal-content">
+        <button class="close-btn" id="closeModal">&times;</button>
+        <img id="largeImage" src="" alt="Large Preview" />
+    </div>
+</div>
+
+
+
+{% endblock body %}
